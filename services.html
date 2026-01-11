@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            margin: 15px 0 10px;
+            color: #007bff;
+        }
+
+        .service-card p {
+            padding: 0 15px 20px;
+            color: #555;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Our Company</h2>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/specialities">Specialities</a>
+        <a href="/about">About</a>
+        <a href="/refer">Refer & Earn</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Our Services</h1>
+
+    <div class="services-grid">
+
+        <!-- Web Development -->
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/web-development.jpg') }}" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>Modern, responsive websites and web applications tailored to your business.</p>
+        </div>
+
+        <!-- Mobile App Development -->
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/mobile-app.jpg') }}" alt="Mobile App Development">
+            <h3>Mobile App Development</h3>
+            <p>High-performance Android and iOS mobile apps with great user experience.</p>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/digital-marketing.jpg') }}" alt="Digital Marketing">
+            <h3>Digital Marketing</h3>
+            <p>SEO, social media, and online advertising to grow your brand online.</p>
+        </div>
+
+        <!-- SEO -->
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/seo.jpg') }}" alt="SEO Services">
+            <h3>SEO Optimization</h3>
+            <p>Improve search rankings and drive more organic traffic to your website.</p>
+        </div>
+
+        <!-- Graphic Design -->
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/graphic-design.jpg') }}" alt="Graphic Design">
+            <h3>Graphic Design</h3>
+            <p>Creative logos, branding, banners, and marketing design solutions.</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

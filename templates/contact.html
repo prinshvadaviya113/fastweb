@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .msg {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Our Company</h2>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/specialities">Specialities</a>
+        <a href="/about">About</a>
+        <a href="/refer">Refer & Earn</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Contact Us</h2>
+
+    <!-- FLASH MESSAGES -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="msg {{ category }}">
+            {{ message }}
+        </div>
+      {% endfor %}
+    {% endwith %}
+
+<!--    &lt;!&ndash; CONTACT FORM &ndash;&gt;-->
+<!--    <form method="POST" action="/contact">-->
+
+<!--        <input type="text" name="name" placeholder="Your Name" required>-->
+
+<!--        <input type="tel" name="phone" placeholder="Your Phone" required>-->
+
+<!--        <input type="email" name="email" placeholder="Your Email" required>-->
+
+<!--        <select name="service" required>-->
+<!--            <option value="">Select Service</option>-->
+<!--            <option value="Web Development">Web Development</option>-->
+<!--            <option value="Mobile App Development">Mobile App Development</option>-->
+<!--            <option value="Digital Marketing">Digital Marketing</option>-->
+<!--            <option value="SEO">SEO</option>-->
+<!--            <option value="Graphic Design">Graphic Design</option>-->
+<!--        </select>-->
+
+<!--        <textarea name="message" placeholder="Your Message (Optional)"></textarea>-->
+
+<!--        <button type="submit">Submit</button>-->
+
+<!--    </form>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+<form method="POST" action="/contact">
+    <input name="name" placeholder="Name" required>
+    <input name="phone" placeholder="Phone" required>
+    <input name="email" placeholder="Email" required>
+    <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="SEO">SEO</option>
+        <option value="Graphic Design">Graphic Design</option>
+    </select>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Submit</button>
+</form>

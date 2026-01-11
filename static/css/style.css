@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0a1f44, #103c7a);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ffb703;
+}
+
+/* BANNER */
+.banner {
+    background: url('../images/banner.jpg') no-repeat center;
+    background-size: cover;
+    padding: 140px 60px;
+    color: white;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 48px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* COMMON */
+.page-title {
+    text-align: center;
+    margin: 60px 0 20px;
+    font-size: 36px;
+    color: #0a1f44;
+}
+
+.section {
+    padding: 40px 80px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.features div {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.features i {
+    font-size: 40px;
+    color: #103c7a;
+}
+
+/* SERVICES */
+.service-box {
+    background: white;
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* SPECIALITIES */
+.special-list li {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* CONTACT */
+.contact-form {
+    width: 45%;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.contact-form button {
+    background: #ffb703;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #0a1f44;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.social i {
+    font-size: 22px;
+    margin: 0 8px;
+    color: white;
+}
